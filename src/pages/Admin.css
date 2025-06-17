@@ -1,0 +1,65 @@
+.admin-bg {
+  min-height: 100vh;
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2K-sqKSeklaVDVl3TKShD0yrLoxt630PiZA&s') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.admin-overlay {
+  min-height: 100vh;
+  background: rgba(12, 12, 12, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-content {
+  background: rgba(255,255,255,0.95);
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  text-align: center;
+  min-width: 320px;
+}
+
+.admin-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.admin-link {
+  background: #1976d2;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+}
+
+.admin-link:hover {
+  background: #125ea2;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.logout-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.logout-btn:hover {
+  background: #b71c1c;
+}

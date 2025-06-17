@@ -1,0 +1,151 @@
+#clases-crud {
+  background: #f9fafb;
+  max-width: 1050px;
+  margin: 2rem auto;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+#clases-crud h2 {
+  margin-top: 0;
+  color: #2563eb;
+  letter-spacing: 1px;
+}
+
+#clases-crud form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+#clases-crud input, #clases-crud select {
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  min-width: 160px;
+  background: #f1f5f9;
+  color: #222;
+}
+
+#clases-crud table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+#clases-crud th, #clases-crud td {
+  border: 1px solid #e2e8f0;
+  padding: 0.7rem 0.9rem;
+  text-align: left;
+  vertical-align: middle;
+  min-width: 120px;
+  max-width: 220px;
+  overflow: hidden;
+}
+
+#clases-crud th {
+  background: #e0e7ef;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+#clases-crud input[type="text"], #clases-crud input[type="number"] {
+  background: #f1f5f9;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  padding: 0.4rem 0.6rem;
+  margin: 0;
+}
+
+#clases-crud .mensaje-exito {
+  color: #256029;
+  background: #e9fbe5;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+#clases-crud .mensaje-error {
+  color: #b91c1c;
+  background: #fee2e2;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+#clases-crud input[type="text"]:focus,
+#clases-crud input[type="number"]:focus {
+  outline: 2px solid #2563eb;
+  background: #e0e7ef;
+}
+
+#clases-crud .acciones {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#clases-crud .acciones button {
+  margin: 0;
+  border-right: 1.5px solid #e5e7eb;
+}
+
+#clases-crud .acciones button:last-child {
+  border-right: none;
+}
+
+#clases-crud .btn-registrar {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+#clases-crud .btn-registrar:hover {
+  background: #1e40af;
+}
+
+#clases-crud .btn-editar {
+  background: #f59e42;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+#clases-crud .btn-editar:hover {
+  background: #d97706;
+}
+
+#clases-crud .btn-eliminar {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+#clases-crud .btn-eliminar:hover {
+  background: #b91c1c;
+}

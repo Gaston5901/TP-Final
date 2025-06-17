@@ -1,0 +1,89 @@
+{
+  "socios": [
+    {
+      "id": "bbb2",
+      "nombre": "gaston",
+      "plan": "trimestral",
+      "cuota": "pagada"
+    },
+    {
+      "id": "c0fc",
+      "nombre": "pacheco",
+      "plan": "mensual",
+      "cuota": "pendiente"
+    },
+    {
+      "id": "97a1",
+      "nombre": "gast",
+      "plan": "mensual",
+      "cuota": "pagada"
+    },
+    {
+      "id": "3d9b",
+      "nombre": "gabriel",
+      "plan": "trimestral",
+      "cuota": "pagada"
+    }
+  ],
+  "instructores": [
+    {
+      "id": "1",
+      "nombre": "Carlos Gómez",
+      "especialidad": "Yoga",
+      "horario": "Lunes 10:00"
+    },
+    {
+      "id": "2",
+      "nombre": "María Ruiz",
+      "especialidad": "Spinning",
+      "horario": "Miércoles 18:00"
+    },
+    {
+      "id": "c288",
+      "nombre": "Alan Caceres",
+      "especialidad": "Resistencia",
+      "horario": "lunes a viernes 10:30"
+    }
+  ],
+  "clases": [
+    {
+      "id": "9bd1",
+      "nombre": "Yoga",
+      "horario": "Lunes y viernes 10:00",
+      "cupo": 20,
+      "instructor": "Alan Caceres",
+      "socios": [
+        "3d9b"
+      ]
+    },
+    {
+      "id": "4e5f",
+      "nombre": "Pilates",
+      "horario": "Martes y jueves 09:00",
+      "cupo": 10,
+      "instructor": "María Ruiz",
+      "socios": [
+        "bbb2"
+      ]
+    },
+    {
+      "id": "a1b2",
+      "nombre": "Funcional",
+      "horario": "Miércoles 18:00",
+      "cupo": 15,
+      "instructor": "Carlos Gómez",
+      "socios": [
+        "c0fc",
+        "97a1",
+        "bbb2"
+      ]
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "usuario": "admin",
+      "password": "1234"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+#admin-page, #socios-crud, #instructores-crud, #clases-crud {
+  background: #fff;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+}
+
+th {
+  background: #f0f0f0;
+}
+
+input, select, button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+}
+
+button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #125ea2;
+}
+
+form {
+  margin-bottom: 1rem;
+}
+
+div[style*="color:green"] {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+div[style*="color:red"] {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
