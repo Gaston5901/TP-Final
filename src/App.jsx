@@ -6,7 +6,9 @@ import Admin from "./pages/Admin";
 import SociosCRUD from "./crud/SociosCRUD";
 import InstructoresCRUD from "./crud/InstructoresCRUD";
 import ClasesCRUD from "./crud/ClasesCRUD";
-import './Styles.css'; // Asegúrate de que este archivo exista y tenga los estilos necesarios
+import UsuariosCRUD from "./crud/UsuariosCRUD"; 
+import PanelUser from "./pages/PanelUser";
+import './Styles.css'; 
 
 // RutaPrivada dentro del mismo archivo
 function RutaPrivada({ children }) {
@@ -15,7 +17,7 @@ function RutaPrivada({ children }) {
 }
 
 function App() {
-  // Opcional: Forzar recarga si el usuario no está logueado y está en /admin
+  
   useEffect(() => {
     if (
       window.location.pathname === "/admin" &&
@@ -29,19 +31,14 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route
-          path="/admin"
-          element={
-            <RutaPrivada>
-              <Admin />
-            </RutaPrivada>
-          }
-        />
-        <Route path="/" element={<Navigate to="/login" replace />} />
+        <Route path="/admin" element={ <RutaPrivada> <Admin /> </RutaPrivada>}/>
+        <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="/home" element={<Home />} />
         <Route path="/socios" element={<SociosCRUD />} />
         <Route path="/instructores" element={<InstructoresCRUD />} />
         <Route path="/clases" element={<ClasesCRUD />} />
+        <Route path="/usuarios" element={<UsuariosCRUD />} />
+        <Route path="/PanelUsuario" element={<RutaPrivada> <PanelUser /> </RutaPrivada>} />
       </Routes>
     </BrowserRouter>
   );

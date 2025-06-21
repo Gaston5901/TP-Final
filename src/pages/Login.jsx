@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import "./Login.css"; 
+
+
 
 function Login() {
   const [usuario, setUsuario] = useState("");
@@ -12,13 +14,19 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Supón que tienes un endpoint /usuarios en tu db.json
       const res = await axios.get("http://localhost:3001/usuarios", {
         params: { usuario, password }
       });
       if (res.data.length > 0) {
-        localStorage.setItem("usuario", JSON.stringify(res.data[0]));
-        navigate("/admin", { replace: true }); // replace para limpiar historial
+        const user = res.data[0];
+        localStorage.setItem("usuario", JSON.stringify(user));
+        if (user.rol === "admin") {
+          navigate("/admin", { replace: true });
+        } else if (user.rol === "usuario") {
+          navigate("/PanelUsuario", { replace: true });
+        } else {
+          setError("Rol no reconocido.");
+        }
       } else {
         setError("Usuario o contraseña incorrectos");
       }
@@ -28,9 +36,17 @@ function Login() {
   };
 
   return (
+    <>
+    <nav className="home-nav">
+  <span className="home-logo">GYM TRIDENT 🔱</span>
+  <div>
+    <Link to="/" className="home-link">Inicio</Link>
+    <Link to="/login" className="home-link">Login</Link>
+  </div>
+</nav>
     <div className="login-background">
-      <div className="login-bg-overlay"></div>
-      <div className="login-form-container">
+    <div className="login-bg-overlay"></div>
+    <div className="login-form-container">
         <h2>Iniciar sesión</h2>
         {error && (
           <div style={{ color: "red", marginBottom: 12 }}>{error}</div>
@@ -81,6 +97,7 @@ function Login() {
         </form>
       </div>
     </div>
+    </>
   );
 }
 

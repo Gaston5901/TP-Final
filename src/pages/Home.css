@@ -1,0 +1,131 @@
+body {
+  background: #f8fafc;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px #0001;
+}
+
+.home-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.home-link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.home-link:hover {
+  color: #a5b4fc;
+}
+
+.home-carrusel-section {
+  margin: 2rem auto 1.5rem auto;
+  max-width: 600px;
+}
+
+.home-carrusel {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #2563eb22;
+  background: #e0e7ef;
+}
+
+.home-carrusel-item {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.7s;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.home-carrusel-item.activo {
+  opacity: 1;
+  z-index: 1;
+}
+
+.home-carrusel-titulo {
+  background: rgba(236, 7, 7, 0.85);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0 0 18px 0;
+  margin: 0;
+}
+
+.home-carrusel-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.2s, background 0.2s;
+  border: 2px solid #2563eb;
+}
+.dot.activo {
+  opacity: 1;
+  background: #2563eb;
+}
+
+.home-catalogos {
+  max-width: 600px;
+  margin: 2rem auto 1.5rem auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0001;
+  padding: 1.5rem 2rem;
+}
+.home-catalogos h2 {
+  margin-top: 0;
+  color: #2563eb;
+}
+.home-catalogos ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 0 0;
+}
+.home-catalogos li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.home-ubicacion {
+  max-width: 600px;
+  margin: 2rem auto 2.5rem auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0001;
+  padding: 1.5rem 2rem;
+}
+.home-ubicacion h2 {
+  margin-top: 0;
+  color: #2563eb;
+}

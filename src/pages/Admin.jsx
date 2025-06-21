@@ -21,6 +21,7 @@ function Admin() {
             <Link className="admin-link" to="/socios">Gestionar Socios</Link>
             <Link className="admin-link" to="/instructores">Gestionar Instructores</Link>
             <Link className="admin-link" to="/clases">Gestionar Clases/Rutinas</Link>
+            <Link className="admin-link" to="/usuarios">Gestionar Usuarios</Link> {/* NUEVO */}
           </div>
         </div>
       </div>

@@ -5,6 +5,8 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+/* Login.css: SOLO estilos del login, sin reglas globales */
+
 .login-background {
   min-height: 100vh;
   width: 100vw;
@@ -89,4 +91,34 @@ body {
   border-radius: 6px;
   margin-bottom: 1rem;
   font-weight: bold;
+}
+
+.home-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px #0001;
+  position: relative;
+  z-index: 10;
+}
+
+.home-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.home-link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.home-link:hover {
+  color: #a5b4fc;
 }

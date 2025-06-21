@@ -81,9 +81,16 @@
   ],
   "usuarios": [
     {
-      "id": 1,
       "usuario": "admin",
-      "password": "1234"
+      "password": "1234",
+      "rol": "usuario",
+      "id": "1"
+    },
+    {
+      "id": "66ff",
+      "usuario": "gaston",
+      "password": "12345",
+      "rol": "admin"
     }
   ]
 }
