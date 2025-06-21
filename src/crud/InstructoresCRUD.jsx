@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import './InstructoresCRUD.css';
+import Swal from 'sweetalert2';
 
 function InstructoresCRUD() {
   const [instructores, setInstructores] = useState([]);
@@ -50,14 +51,42 @@ function InstructoresCRUD() {
     setNuevoInstructor({ nombre: "", especialidad: "", horario: "" });
   };
 
-  const handleEliminar = (id) => {
-    axios.delete(`http://localhost:3001/instructores/${id}`)
-      .then(() => {
-        setInstructores(instructores.filter((i) => i.id !== id));
-        mostrarMensaje("Instructor eliminado");
-      })
-      .catch(() => mostrarError("Error al eliminar instructor"));
-  };
+    /* const handleEliminar = (id) => {
+          if (window.confirm("¿Seguro que deseas eliminar este instructor?")) {
+      axios.delete(`http://localhost:3001/instructores/${id}`)
+        .then(() => {
+          setInstructores(instructores.filter((i) => i.id !== id));
+          mostrarMensaje("Instructor eliminado");
+        })
+        .catch(() => mostrarError("Error al eliminar instructor"));
+    } 
+  }; */
+
+
+const handleEliminar = (id) => {
+  Swal.fire({
+    title: '¿Estás seguro?',
+    text: '¿Deseas eliminar este instructor?',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Sí, eliminar',
+    cancelButtonText: 'Cancelar',
+  }).then((result) => {
+    if (result.isConfirmed) {
+      axios
+        .delete(`http://localhost:3001/instructores/${id}`)
+        .then(() => {
+          setInstructores(instructores.filter((i) => i.id !== id));
+          mostrarMensaje("Instructor eliminado");
+        })
+        .catch(() => mostrarError("Error al eliminar instructor"));
+    }
+  });
+};
+
+ 
+
+
 
   const handleEditar = (inst) => {
     setEditando(inst.id);

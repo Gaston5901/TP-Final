@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Swal from 'sweetalert2';
-import 'sweetalert2/dist/sweetalert2.min.css';
+import 'sweetalert2/dist/sweetalert2.min.css'; 
 import './ClasesCRUD.css';
 
 function ClasesCRUD() {
@@ -63,7 +63,8 @@ function ClasesCRUD() {
     setNuevaClase({ nombre: "", horario: "", cupo: "", instructor: "" });
   };
 
-  const handleEliminar = (id) => {
+    /* const handleEliminar = (id) => {
+        if (window.confirm("¿Seguro que deseas eliminar este socio?")) {
     axios.delete(`http://localhost:3001/clases/${id}`)
       .then(() => {
         setClases(clases.filter((c) => c.id !== id));
@@ -74,7 +75,35 @@ function ClasesCRUD() {
         setError("Error al eliminar clase");
         setTimeout(() => setError(""), 2000);
       });
-  };
+  }
+  }; */
+
+
+ const handleEliminar = (id) => {
+  Swal.fire({
+    title: '¿Estás seguro?',
+    text: '¿Deseas eliminar esta clase?',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Sí, eliminar',
+    cancelButtonText: 'Cancelar',
+  }).then((result) => {
+    if (result.isConfirmed) {
+      axios
+        .delete(`http://localhost:3001/clases/${id}`)
+        .then(() => {
+          setClases(clases.filter((c) => c.id !== id));
+          setMensaje("Clase eliminada");
+          setTimeout(() => setMensaje(""), 2000);
+        })
+        .catch(() => {
+          setError("Error al eliminar clase");
+          setTimeout(() => setError(""), 2000);
+        });
+    }
+  });
+}; 
+
 
   const handleEditar = (clase) => {
     // Opciones de instructores

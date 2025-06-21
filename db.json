@@ -17,12 +17,6 @@
       "nombre": "gast",
       "plan": "mensual",
       "cuota": "pagada"
-    },
-    {
-      "id": "3d9b",
-      "nombre": "gabriel",
-      "plan": "trimestral",
-      "cuota": "pagada"
     }
   ],
   "instructores": [
@@ -43,6 +37,12 @@
       "nombre": "Alan Caceres",
       "especialidad": "Resistencia",
       "horario": "lunes a viernes 10:30"
+    },
+    {
+      "id": "c374",
+      "nombre": "lucas",
+      "especialidad": "fuerza",
+      "horario": "02:00"
     }
   ],
   "clases": [
@@ -53,7 +53,8 @@
       "cupo": 20,
       "instructor": "Alan Caceres",
       "socios": [
-        "3d9b"
+        "3d9b",
+        "c0fc"
       ]
     },
     {
@@ -77,13 +78,21 @@
         "97a1",
         "bbb2"
       ]
+    },
+    {
+      "id": "362c",
+      "nombre": "88",
+      "horario": "02:00",
+      "cupo": 15,
+      "instructor": "Alan Caceres",
+      "socios": []
     }
   ],
   "usuarios": [
     {
-      "usuario": "admin",
+      "usuario": "gabi",
       "password": "1234",
-      "rol": "usuario",
+      "rol": "admin",
       "id": "1"
     },
     {
