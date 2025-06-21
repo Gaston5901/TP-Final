@@ -133,20 +133,27 @@ function SociosCRUD() {
               onChange={handleChange}
               required
             />
-            <input
+            <select
               name="plan"
-              placeholder="Plan"
               value={nuevoSocio.plan}
               onChange={handleChange}
               required
-            />
-            <input
+            >
+              <option value="">Selecciona un plan</option>
+              <option value="anual">Anual</option>
+              <option value="trimestral">Trimestral</option>
+              <option value="mensual">Mensual</option>
+            </select>
+            <select
               name="cuota"
-              placeholder="Estado de cuota"
               value={nuevoSocio.cuota}
               onChange={handleChange}
               required
-            />
+            >
+              <option value="">Estado de cuota</option>
+              <option value="pagado">Pagado</option>
+              <option value="pendiente">Pendiente</option>
+            </select>
             <button type="submit">Agregar Socio</button>
           </form>
 

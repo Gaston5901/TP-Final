@@ -21,7 +21,7 @@ function Login() {
         const user = res.data[0];
         localStorage.setItem("usuario", JSON.stringify(user));
         if (user.rol === "admin") {
-          navigate("/admin", { replace: true });
+          navigate("/admin", { replace: true });  
         } else if (user.rol === "usuario") {
           navigate("/PanelUsuario", { replace: true });
         } else {
@@ -42,6 +42,7 @@ function Login() {
   <div>
     <Link to="/" className="home-link">Inicio</Link>
     <Link to="/login" className="home-link">Login</Link>
+    <Link to="/clasesvista" className="home-link">Clases</Link>
   </div>
 </nav>
     <div className="login-background">
@@ -58,40 +59,17 @@ function Login() {
             value={usuario}
             onChange={(e) => setUsuario(e.target.value)}
             required
-            style={{
-              width: "100%",
-              marginBottom: 12,
-              padding: 8,
-              borderRadius: 6,
-              border: "1px solid #ccc",
-            }}
-          />
+            style={{width: "100%",marginBottom: 12,padding: 8,borderRadius: 6,border: "1px solid #ccc",}}/>
           <input
             type="password"
             placeholder="Contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            style={{
-              width: "100%",
-              marginBottom: 12,
-              padding: 8,
-              borderRadius: 6,
-              border: "1px solid #ccc",
-            }}
-          />
+            style={{width: "100%",marginBottom: 12,padding: 8,borderRadius: 6,border: "1px solid #ccc",}}/>
           <button
             type="submit"
-            style={{
-              width: "100%",
-              padding: 10,
-              borderRadius: 6,
-              background: "#2563eb",
-              color: "#fff",
-              fontWeight: "bold",
-              border: "none",
-            }}
-          >
+            style={{width: "100%",padding: 10,borderRadius: 6,background: "#2563eb",color: "#fff",fontWeight: "bold",border: "none",}}>
             Ingresar
           </button>
         </form>

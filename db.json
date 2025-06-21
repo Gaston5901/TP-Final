@@ -13,10 +13,29 @@
       "cuota": "pendiente"
     },
     {
+<<<<<<< HEAD
       "id": "97a1",
       "nombre": "gast",
       "plan": "mensual",
       "cuota": "pagada"
+=======
+      "id": "3d9b",
+      "nombre": "gabriel",
+      "plan": "trimestral",
+      "cuota": "pagada"
+    },
+    {
+      "id": "1dc6",
+      "nombre": "Deyby",
+      "plan": "mensual",
+      "cuota": "pagada"
+    },
+    {
+      "id": "200e",
+      "nombre": "Marcos",
+      "plan": "anual",
+      "cuota": "pagado"
+>>>>>>> main
     }
   ],
   "instructores": [
@@ -99,6 +118,12 @@
       "id": "66ff",
       "usuario": "gaston",
       "password": "12345",
+      "rol": "admin"
+    },
+    {
+      "id": "9050",
+      "usuario": "gabriel",
+      "password": "11",
       "rol": "admin"
     }
   ]

@@ -321,11 +321,7 @@ function ClasesCRUD() {
                         />
                       </td>
                       <td>
-                        <input
-                          type="number"
-                          value={claseEditada.cupo}
-                          onChange={(e) => setClaseEditada({ ...claseEditada, cupo: e.target.value })}
-                        />
+                        <input type="number" value={claseEditada.cupo} onChange={(e) => setClaseEditada({ ...claseEditada, cupo: e.target.value })} />
                       </td>
                       <td>
                         <select
@@ -383,13 +379,7 @@ function ClasesCRUD() {
                         <button type="button" onClick={() => handleEditar(clase)} style={{ marginLeft: "0.5rem" }}>
                           Editar
                         </button>
-                        <button
-                          type="button"
-                          className="btn-eliminar"
-                          onClick={() => handleEliminar(clase.id)}
-                        >
-                          Eliminar
-                        </button>
+                        <button type="button" className="btn-eliminar" onClick={() => handleEliminar(clase.id)}>Eliminar</button>
                       </td>
                     </>
                   )}
