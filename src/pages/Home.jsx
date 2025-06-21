@@ -20,7 +20,7 @@ const imagenesCarrusel = [
 function Home() {
   return (
     <div id="home-page">
-      {/* NAVBAR */}
+      
       <nav className="home-nav">
         <span className="home-logo">GYM TRIDENT 🔱</span>
         <div>
