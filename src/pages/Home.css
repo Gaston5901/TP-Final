@@ -135,3 +135,34 @@ body {
   margin-top: 0;
   color: #2563eb;
 }
+
+.home-footer {
+  background-color: #1e293b;
+  color: #fff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  margin-top: 3rem;
+  border-top: 3px solid #2563eb;
+}
+
+.home-footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer-links {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: #93c5fd;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

@@ -13,12 +13,6 @@
       "cuota": "pendiente"
     },
     {
-<<<<<<< HEAD
-      "id": "97a1",
-      "nombre": "gast",
-      "plan": "mensual",
-      "cuota": "pagada"
-=======
       "id": "3d9b",
       "nombre": "gabriel",
       "plan": "trimestral",
@@ -35,7 +29,6 @@
       "nombre": "Marcos",
       "plan": "anual",
       "cuota": "pagado"
->>>>>>> main
     }
   ],
   "instructores": [

@@ -121,8 +121,13 @@ function Carrusel({ imagenes }) {
             onClick={() => setActual(idx)}
           ></span>
         ))}
+
+
+
+
       </div>
     </div>
+    
   );
 }
 
