@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import './SociosCRUD.css';
+import Swal from 'sweetalert2';
+
 
 function SociosCRUD() {
   const [socios, setSocios] = useState([]);
@@ -50,14 +52,38 @@ function SociosCRUD() {
     setNuevoSocio({ nombre: "", plan: "", cuota: "" });
   };
 
-  const handleEliminar = (id) => {
+ /* const handleEliminar = (id) => {
+      if (window.confirm("¿Seguro que deseas eliminar este socio?")) {
     axios.delete(`http://localhost:3001/socios/${id}`)
       .then(() => {
         setSocios(socios.filter((s) => s.id !== id));
         mostrarMensaje("Socio eliminado");
       })
       .catch(() => mostrarError("Error al eliminar socio"));
-  };
+  }
+  }; */
+
+  const handleEliminar = (id) => {
+  Swal.fire({
+    title: '¿Estás seguro?',
+    text: '¿Deseas eliminar este socio?',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Sí, eliminar',
+    cancelButtonText: 'Cancelar',
+  }).then((result) => {
+    if (result.isConfirmed) {
+      axios
+        .delete(`http://localhost:3001/socios/${id}`)
+        .then(() => {
+          setSocios(socios.filter((s) => s.id !== id));
+          mostrarMensaje("Socio eliminado");
+        })
+        .catch(() => mostrarError("Error al eliminar socio"));
+    }
+  });
+};
+
 
   const handleEditar = (socio) => {
     setEditando(socio.id);

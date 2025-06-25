@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./UsuariosCRUD.css";
+import Swal from 'sweetalert2';
+
 
 function UsuariosCRUD() {
   const [usuarios, setUsuarios] = useState([]);
@@ -29,11 +31,27 @@ function UsuariosCRUD() {
     });
   };
 
-  const handleEliminar = id => {
+  /*const handleEliminar = id => {
     if (window.confirm("¿Seguro que deseas eliminar este usuario?")) {
       axios.delete(`http://localhost:3001/usuarios/${id}`).then(cargarUsuarios);
     }
-  };
+  }; */
+
+  const handleEliminar = (id) => {
+  Swal.fire({
+    title: '¿Estás seguro?',
+    text: 'Esta acción eliminará al usuario de forma permanente.',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Sí, eliminar',
+    cancelButtonText: 'Cancelar',
+  }).then((result) => {
+    if (result.isConfirmed) {
+      axios.delete(`http://localhost:3001/usuarios/${id}`).then(cargarUsuarios);
+    }
+  });
+};
+
 
   const abrirModalEditar = usuario => {
     setEditando(usuario.id);
