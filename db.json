@@ -1,10 +1,10 @@
 {
   "socios": [
     {
-      "id": "bbb2",
       "nombre": "gaston",
       "plan": "trimestral",
-      "cuota": "pagada"
+      "cuota": "pagada",
+      "id": "bbb2"
     },
     {
       "id": "c0fc",
@@ -13,29 +13,10 @@
       "cuota": "pendiente"
     },
     {
-<<<<<<< HEAD
       "id": "97a1",
       "nombre": "gast",
       "plan": "mensual",
       "cuota": "pagada"
-=======
-      "id": "3d9b",
-      "nombre": "gabriel",
-      "plan": "trimestral",
-      "cuota": "pagada"
-    },
-    {
-      "id": "1dc6",
-      "nombre": "Deyby",
-      "plan": "mensual",
-      "cuota": "pagada"
-    },
-    {
-      "id": "200e",
-      "nombre": "Marcos",
-      "plan": "anual",
-      "cuota": "pagado"
->>>>>>> main
     }
   ],
   "instructores": [
@@ -72,7 +53,6 @@
       "cupo": 20,
       "instructor": "Alan Caceres",
       "socios": [
-        "3d9b",
         "c0fc"
       ]
     },
@@ -97,23 +77,9 @@
         "97a1",
         "bbb2"
       ]
-    },
-    {
-      "id": "362c",
-      "nombre": "88",
-      "horario": "02:00",
-      "cupo": 15,
-      "instructor": "Alan Caceres",
-      "socios": []
     }
   ],
   "usuarios": [
-    {
-      "usuario": "gabi",
-      "password": "1234",
-      "rol": "admin",
-      "id": "1"
-    },
     {
       "id": "66ff",
       "usuario": "gaston",
@@ -125,6 +91,12 @@
       "usuario": "gabriel",
       "password": "11",
       "rol": "admin"
+    },
+    {
+      "id": "116c",
+      "usuario": "gabi",
+      "password": "1",
+      "rol": "usuario"
     }
   ]
 }
