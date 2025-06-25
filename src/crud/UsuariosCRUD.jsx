@@ -111,4 +111,4 @@ function UsuariosCRUD() {
   );
 }
 
-export default UsuariosCRUD;
+export default UsuariosCRUD;  

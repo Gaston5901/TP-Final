@@ -30,9 +30,12 @@ function Home() {
           <Link to="/login" className="home-link">
             Login
           </Link>
+          <Link to="/clasesvista" className="home-link">
+            Clases
+          </Link>
         </div>
       </nav>
-
+    
       {/* CARRUSEL */}
       <section className="home-carrusel-section">
         <Carrusel imagenes={imagenesCarrusel} />
@@ -53,13 +56,7 @@ function Home() {
       <section className="home-ubicacion">
         <h2>Ubicación</h2>
         <ul
-          style={{
-            listStyle: "none",
-            padding: 0,
-            fontSize: "1.1rem",
-            lineHeight: "2",
-          }}
-        >
+          style={{listStyle: "none",padding: 0,fontSize: "1.1rem",lineHeight: "2",}}>
           <li>
             <span role="img" aria-label="ubicación">
               📌
@@ -88,6 +85,7 @@ function Home() {
        
       </section>
     </div>
+    
   );
 }
 
