@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import "./Login.css"; 
+import Header from "../components/Header";
 
 
 
@@ -37,14 +38,7 @@ function Login() {
 
   return (
     <>
-    <nav className="home-nav">
-  <span className="home-logo">GYM TRIDENT 🔱</span>
-  <div>
-    <Link to="/" className="home-link">Inicio</Link>
-    <Link to="/login" className="home-link">Login</Link>
-    <Link to="/clasesvista" className="home-link">Clases</Link>
-  </div>
-</nav>
+  <Header />
     <div className="login-background">
     <div className="login-bg-overlay"></div>
     <div className="login-form-container">
@@ -73,9 +67,12 @@ function Login() {
             Ingresar
           </button>
         </form>
+        
       </div>
     </div>
+        
     </>
+    
   );
 }
 

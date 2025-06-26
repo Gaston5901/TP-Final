@@ -37,12 +37,6 @@
       "nombre": "Alan Caceres",
       "especialidad": "Resistencia",
       "horario": "lunes a viernes 10:30"
-    },
-    {
-      "id": "c374",
-      "nombre": "lucas",
-      "especialidad": "fuerza",
-      "horario": "02:00"
     }
   ],
   "clases": [
@@ -93,10 +87,33 @@
       "rol": "admin"
     },
     {
-      "id": "116c",
       "usuario": "gabi",
       "password": "1",
-      "rol": "usuario"
+      "rol": "usuario",
+      "id": "116c"
+    }
+  ],
+  "integrantes": [
+    {
+      "id": "1",
+      "nombre": "Deyby Zenteno",
+      "legajo": 62060,
+      "url": "https://github.com/deybyzenteno",
+      "foto": "./src/imgs/deyby.png"
+    },
+    {
+      "id": "2",
+      "nombre": "Gaston Ituarte",
+      "url": "https://github.com/Gaston5901",
+      "legajo": 62379,
+      "foto": "./src/imgs/gaston.png"
+    },
+    {
+      "id": "3",
+      "nombre": "Caro Gabriel",
+      "legajo": 62089,
+      "url": "https://github.com/Caro-Gabriel",
+      "foto": "../src/imgs/gabriel.png"
     }
   ]
 }

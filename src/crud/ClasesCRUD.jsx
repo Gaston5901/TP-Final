@@ -58,25 +58,13 @@ function ClasesCRUD() {
       .then((res) => {
         setClases([...clases, res.data]);
         setMensaje("Clase agregada correctamente");
-      })
-      .catch(() => setError("Error al agregar clase"));
-    setNuevaClase({ nombre: "", horario: "", cupo: "", instructor: "" });
-  };
-
-    /* const handleEliminar = (id) => {
-        if (window.confirm("¿Seguro que deseas eliminar este socio?")) {
-    axios.delete(`http://localhost:3001/clases/${id}`)
-      .then(() => {
-        setClases(clases.filter((c) => c.id !== id));
-        setMensaje("Clase eliminada");
+        setNuevaClase({ nombre: "", horario: "", cupo: "", instructor: "" });
         setTimeout(() => setMensaje(""), 2000);
       })
-      .catch(() => {
-        setError("Error al eliminar clase");
-        setTimeout(() => setError(""), 2000);
-      });
-  }
-  }; */
+      .catch(() => setError("Error al agregar clase"));
+    
+  };
+
 
 
  const handleEliminar = (id) => {

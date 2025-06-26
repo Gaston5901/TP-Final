@@ -31,11 +31,7 @@ function UsuariosCRUD() {
     });
   };
 
-  /*const handleEliminar = id => {
-    if (window.confirm("¿Seguro que deseas eliminar este usuario?")) {
-      axios.delete(`http://localhost:3001/usuarios/${id}`).then(cargarUsuarios);
-    }
-  }; */
+  
 
   const handleEliminar = (id) => {
   Swal.fire({

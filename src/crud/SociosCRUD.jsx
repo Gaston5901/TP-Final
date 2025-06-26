@@ -52,16 +52,7 @@ function SociosCRUD() {
     setNuevoSocio({ nombre: "", plan: "", cuota: "" });
   };
 
- /* const handleEliminar = (id) => {
-      if (window.confirm("¿Seguro que deseas eliminar este socio?")) {
-    axios.delete(`http://localhost:3001/socios/${id}`)
-      .then(() => {
-        setSocios(socios.filter((s) => s.id !== id));
-        mostrarMensaje("Socio eliminado");
-      })
-      .catch(() => mostrarError("Error al eliminar socio"));
-  }
-  }; */
+ 
 
   const handleEliminar = (id) => {
   Swal.fire({

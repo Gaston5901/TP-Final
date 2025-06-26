@@ -9,6 +9,7 @@ import ClasesCRUD from "./crud/ClasesCRUD";
 import UsuariosCRUD from "./crud/UsuariosCRUD"; 
 import PanelUser from "./pages/PanelUser";
 import ClasesSoloVista from "./crud/ClasesSoloVista";
+import Integrantes from "./members/Integrantes";
 import './Styles.css'; 
 
 // RutaPrivada dentro del mismo archivo
@@ -41,6 +42,7 @@ function App() {
         <Route path="/usuarios" element={<UsuariosCRUD />} />
         <Route path="/PanelUsuario" element={<RutaPrivada> <PanelUser /> </RutaPrivada>} />
         <Route path="/clasesvista" element={<ClasesSoloVista />} />
+        <Route path="/integrantes" element={<Integrantes />} />
       </Routes>
       
     </BrowserRouter>

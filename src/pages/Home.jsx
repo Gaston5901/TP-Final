@@ -38,42 +38,11 @@ function Home() {
           <li>Clases grupales</li>
           <li>Entrenamiento personalizado</li>
           <li>Planes y membresías</li>
-          <li>Horarios</li>
+          <li>Horario: Lunes a Sábado 8:00 a 22:00</li>
         </ul>
       </section>
 
-      {/* UBICACIÓN */}
-      <section className="home-ubicacion">
-        <h2>Ubicación</h2>
-        <ul
-          style={{listStyle: "none",padding: 0,fontSize: "1.1rem",lineHeight: "2",}}>
-          <li>
-            <span role="img" aria-label="ubicación">
-              📌
-            </span>
-            <b> Dirección:</b> Av. Chacabuco 1234, Tucuman, Argentina
-          </li>
-          <li>
-            <span role="img" aria-label="teléfono">
-              📞
-            </span>
-            <b> Teléfono:</b> +54 9 11 1234-5678
-          </li>
-          <li>
-            <span role="img" aria-label="email">
-              ✉️
-            </span>
-            <b> Email:</b> contacto@gymtrident.com
-          </li>
-          <li>
-            <span role="img" aria-label="horario">
-              ⏰
-            </span>
-            <b> Horario:</b> Lunes a Sábado 8:00 a 22:00
-          </li>
-        </ul>
-       
-      </section>
+      
       
       <Footer />
     </div>

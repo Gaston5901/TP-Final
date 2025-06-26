@@ -51,17 +51,6 @@ function InstructoresCRUD() {
     setNuevoInstructor({ nombre: "", especialidad: "", horario: "" });
   };
 
-    /* const handleEliminar = (id) => {
-          if (window.confirm("¿Seguro que deseas eliminar este instructor?")) {
-      axios.delete(`http://localhost:3001/instructores/${id}`)
-        .then(() => {
-          setInstructores(instructores.filter((i) => i.id !== id));
-          mostrarMensaje("Instructor eliminado");
-        })
-        .catch(() => mostrarError("Error al eliminar instructor"));
-    } 
-  }; */
-
 
 const handleEliminar = (id) => {
   Swal.fire({

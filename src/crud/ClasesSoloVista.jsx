@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+
+import Footer from "../components/Footer";
 import axios from "axios";
+import Header from "../components/Header";
 
 function ClasesSoloVista() {
   const [clases, setClases] = useState([]);
@@ -11,14 +13,7 @@ function ClasesSoloVista() {
 
   return (
     <>  
-    <nav className="home-nav">
-  <span className="home-logo">GYM TRIDENT 🔱</span>
-  <div>
-    <Link to="/" className="home-link">Inicio</Link>
-    <Link to="/login" className="home-link">Login</Link>
-    <Link to="/clasesvista" className="home-link">Clases</Link>
-  </div>
-</nav>
+    <Header />
 
     <div style={{ maxWidth: 600, margin: "2rem auto", background: "#fff", borderRadius: 12, boxShadow: "0 2px 12px #0001", padding: "2rem" }}>
       <h2 style={{ color: "#2563eb" }}>Clases Disponibles</h2>
@@ -33,7 +28,8 @@ function ClasesSoloVista() {
           </li> 
         ))}
       </ul>
-    </div>
+    </div> 
+    <Footer />
     </>
   );
 }
